@@ -20,7 +20,7 @@ export class PacienteController{
 
     //GET /pacientes
     async listar(req: Request, res: Response){
-        const pacientes = pacienteRepository.find()
+        const pacientes = await pacienteRepository.find()
         return res.json(pacientes)
     }
 }
