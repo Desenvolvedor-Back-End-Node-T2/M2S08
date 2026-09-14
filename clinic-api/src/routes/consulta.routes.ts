@@ -43,7 +43,7 @@ consultaRoutes.post(
  * @openapi
  * /consultas:
  *   get:
- *     summary: Lista consultas (PACIENTE vê as suas, MEDICO vê as suas, ADMIN vê todas)
+ *    summary: Lista consultas (PACIENTE vê as suas, MEDICO vê as suas, ADMIN vê todas)
  *    tags: [Consultas]
  *    security:
  *      - bearerAuth: []
