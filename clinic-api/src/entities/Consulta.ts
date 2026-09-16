@@ -48,6 +48,9 @@ export class Consulta{
     @Column({nullable: true})
     observacoes?: string
 
+    @Column({name:"cancelada_em", type: "timestamp", nullable: true})
+    canceladaEm?: Date
+
     @CreateDateColumn({name:"criado_em"})
     criadoEm!: Date
 
