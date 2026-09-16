@@ -19,8 +19,10 @@ export const AppDataSource = new DataSource({
         process.env.DB_SSL === "true" 
         ? { rejectUnauthorized: false } 
         : false,
-    synchronize: true,
+    synchronize: false,
     logging: false,
+    migrations: ["src/migrations/*.ts"],
+    migrationsTableName: "migrations_history",
 
     entities: [Usuario, Paciente, Medico, Consulta]
 })
