@@ -45,7 +45,7 @@ export class Consulta{
     })
     status!: ConsultaStatus
 
-    @Column({nullable: true})
+    @Column({nullable: true, type: "text"})
     observacoes?: string
 
     @Column({name:"cancelada_em", type: "timestamp", nullable: true})
