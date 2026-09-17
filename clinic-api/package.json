@@ -10,7 +10,7 @@
     "typeorm": "ts-node ./node_modules/typeorm/cli.js -d src/data-source.ts",
     "migration:generate": "npm run typeorm -- migration:generate",
     "migration:run": "npm run typeorm -- migration:run",
-    "migration:create": "npm run typeorm -- migration:create",
+    "migration:create": "typeorm-ts-node-commonjs migration:create",
     "migration:revert": "npm run typeorm -- migration:revert"
 
   },
