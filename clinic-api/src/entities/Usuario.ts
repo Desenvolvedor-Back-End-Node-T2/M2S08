@@ -2,7 +2,8 @@ import {
     Entity,
     PrimaryGeneratedColumn,
     Column,
-    CreateDateColumn
+    CreateDateColumn,
+    Index
 } from 'typeorm'
 
 //Enum para representar as roles dos usuários
@@ -12,6 +13,7 @@ export enum UsuarioRole{
     ADMIN = "ADMIN"
 }
 
+@Index(["email"])
 @Entity("usuarios")
 export class Usuario{
     @PrimaryGeneratedColumn("uuid")
@@ -25,6 +27,9 @@ export class Usuario{
 
     @Column("varchar")
     senha!: string
+
+    @Column()
+    telefone: string
 
     @Column({
         type: "enum",
